@@ -16,7 +16,7 @@
 
 
 <body class="bg-info snail-background">
-<!-- ANCHOR header -->
+    <!-- ANCHOR header -->
     <Header class="bg-dark border border-dark text-light mb-5">
         <p class="fs-3">Snail Slayers!</p>
     </Header>
@@ -29,27 +29,27 @@
             </div>
         </section>
 
-<!-- ANCHOR player cards -->
-<!-- 1st card -->
+        <!-- ANCHOR player cards -->
+        <!-- 1st card -->
         <section class="row">
-            <div class="col-2 player-card m-1 d-flex flex-column align-items-center">
+            <div class="col-2 player-card m-1 d-flex flex-column align-items-center" id="josh">
                 <p class="fs-4">Demek</p>
                 <img class="player-img" src="Demek-character.png" alt="Demek">
-                <p>Health: ""</p>
-                <p>Damage: ""</p>
-                <p>Level: ""</p>
+                <p>Status: <span class="stats"></span></p>
+
             </div>
-<!-- 2nd card -->
-            <div class="col-2 player-card m-1 d-flex flex-column align-items-center">
+            <!-- 2nd card -->
+            <div class="col-2 player-card m-1 d-flex flex-column align-items-center" id="skyler">
                 <p class="fs-4">Skyler</p>
                 <img class="player-img" src="Skyler-character.png" alt="Skyler">
-                <p>Health: ""</p>
-                <p>Damage: ""</p>
-                <p>Level: ""</p>
+                <p>Status: <span class="stats"></span></p>
             </div>
+            <section class="col-7" id="boss">
+                <img src="snail-country.png" alt="country snail" class="player-card snail-img">
+            </section>
         </section>
 
-<!-- ANCHOR store -->
+        <!-- ANCHOR store -->
         <section class="row">
             <div class="col-4 fs-4 style-card">
                 <p>Buy Potion: ""G</p>
@@ -61,7 +61,6 @@
             <div class="col-6 col-md-4">
                 <button class="btn btn-dark" title="Murderize" onclick="attack()">ATTACK</button>
             </div>
-            <div class="col-6 col-md-8"></div>
         </section>
     </main>
 
