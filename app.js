@@ -1,5 +1,5 @@
-playerGold = 0
-
+let playerGold = 0
+let  gameOver = false
 
 const heroes = [
     {
@@ -32,6 +32,7 @@ const boss = {
 
 function attack(){
     healthCheck()
+    gameOverCheck()
     heroes.forEach(hero => {
         hero.health -= boss.damage
         boss.health -= hero.damage
@@ -42,13 +43,14 @@ function attack(){
 
  function healthCheck(){
     if(boss.health <= 0){
-        boss.maxHealth += 50
-        boss.damage += 5
+        boss.maxHealth += 70
+        boss.damage += 8
         boss.level += 1
         boss.gold += 50
         boss.health = boss.maxHealth
         levelUp()
     }
+    
  }
 
 function levelUp() { 
@@ -60,4 +62,11 @@ function levelUp() {
         hero.health = hero.maxHealth
     })
     window.alert('LEVEL UP')
+    }
+
+    function gameOverCheck(){
+        let deadHeroes = heroes.filter(hero => hero.health <= 0)
+            if(deadHeroes.length == heroes.length){
+                window.alert('DUDE THIS GAME WAS SUPPOSED TO BE EASY WTF')
+            }
     }
