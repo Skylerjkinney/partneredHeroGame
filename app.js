@@ -17,29 +17,26 @@ const heroes = [
     }
 ]
 
-const bosses = [{
+const boss = {
     type: 'country',
     health: 100,
     maxHealth: 100,
     damage: 5,
     level: 1,
     gold: 50
-},
-{   
-    type: 'forest',
-    health: 150,
-    maxHealth: 150,
-    damage: 7,
-    level: 2,
-    gold:100
-
 }
-]
+
 function attack(){
     heroes.forEach(hero => {
         hero.health -= boss.damage
+        boss.health -= hero.damage
+        console.log(boss.health, '🐌', hero.health, '🦸')
     })
-    bosses.forEach(boss => 
-        boss.health -= hero.damage)
-        console.log(boss.health, hero.health)
+    if(boss.health <= 0){
+        boss.maxHealth += 50
+        boss.damage += 5
+        boss.level += 1
+        boss.gold += 50
+        boss.health = boss.maxHealth
+    }
 }
