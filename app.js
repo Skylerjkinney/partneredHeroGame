@@ -44,7 +44,7 @@ function attack(){
  function healthCheck(){
     if(boss.health <= 0){
         boss.maxHealth += 70
-        boss.damage += 8
+        boss.damage *= 1.75
         boss.level += 1
         boss.gold += 50
         boss.health = boss.maxHealth
