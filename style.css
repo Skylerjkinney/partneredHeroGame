@@ -1,0 +1,29 @@
+.player-img {
+    height: 15vh;
+    width: 15vh;
+    object-fit: contain;
+    object-position: center;
+   
+    border-radius: 10%;
+}
+
+.player-card {
+    background-color: #c6c8cf;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #3a3b40;
+    color: #3a3b40;
+}
+.style-card {
+    background-color: #c6c8cf;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #3a3b40;
+    color: #3a3b40;
+}
+
+.snail-background {
+    background-image: url(snail-bg-tile.png);
+    background-size: auto;
+}
